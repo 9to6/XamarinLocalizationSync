@@ -72,7 +72,7 @@ module XamarinLocalizationSync
 			FileUtils::mkdir_p target_dir
 
 			@contents.each do |k, v|
-				locale_name = k.sub('-', '_')
+				locale_name = k.sub('-', '-r')
 				dirname = 'values'
 				if k != 'default'
 					dirname += "-#{locale_name}"
@@ -85,7 +85,7 @@ module XamarinLocalizationSync
 				doc = XmlSimple.xml_out({'string' => data_list}, "AttrPrefix" => true, 
 										"RootName" => "resources",
 	                                  "ContentKey" => "value")
-				File.open("#{target_dir}/#{dirname}/strings.xml", "w:utf-8") do |f|
+				File.open("#{target_dir}/#{dirname}/Strings.xml", "w:utf-8") do |f|
 					f.write(doc)
 				end
 			end
