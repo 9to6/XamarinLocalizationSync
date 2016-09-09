@@ -2,6 +2,10 @@
 
 When you use Xamarin.Forms, this code help u for synchronization of localization file .
 
+This script create files, 
+  for ios localization files, Localizable.strings, 
+  for android localization files, strings.xml
+
 If you have a ruby development environment, you can download this files and execute it directly.
 
 1. bundle install
